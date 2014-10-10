@@ -1,0 +1,97 @@
+<link rel="import" href="/bower_components/core-animated-pages/core-animated-pages.html">
+
+<link rel="import" href="/bower_components/paper-button/paper-button.html">
+<link rel="import" href="/bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="/bower_components/paper-shadow/paper-shadow.html">
+
+<link rel="import" href="/elements/story-list.html">
+
+<polymer-element name="blue-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .cover {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.25);
+        background-image: url('/images/1civil-repeat.png');
+      }
+      .logo {
+        width: 480px;
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .typography {
+        text-align: center;
+        font-weight: 300;
+      }
+      .typography > h1 {
+        margin: 0;
+        font-size: 48px;
+        font-weight: 300;
+      }
+      .typography > p {
+        font-size: 18px;
+        font-weight: 300;
+      }
+      #join {
+        padding: 8px 24px;
+        margin-bottom: 16px;
+        color: #fff;
+        background-color: #308fbf;
+        border-radius: 0;
+      }
+      .tabs {
+        width: 100%;
+        color: #fff;
+      }
+      .tab::shadow #ink {
+        color: #fff;
+      }
+      .tabs::shadow #selectionBar {
+        background-color: #fff;
+      }
+    </style>
+    <div class="cover" vertical layout center center-justified>
+      <div class="logo" center>
+        <img src="/images/cover-icon.png" alt="Resistance Wuhan Logo">
+      </div>
+      <div class="typography" center>
+        <h1>Resistance Wuhan</h1>
+        <p>Humanity's freedom is at stake. Join in our crusade to defend human civilization.</p>
+        <paper-button id="join" raised>Join the Resistance</paper-button>
+      </div>
+      <paper-tabs class="tabs" selected="{{tabSelection}}">
+        <paper-tab class="tab">OUR STORY</paper-tab>
+        <paper-tab class="tab">OUR DUTY</paper-tab>
+        <paper-tab class="tab">JOIN US</paper-tab>
+      </paper-tabs>
+      <paper-shadow z="1"></paper-shadow>
+    </div>
+    <div class="content">
+      <core-animated-pages transitions="cross-fade-all" selected="{{tabSelection}}">
+        <section id="our-story">
+          <story-list></story-list>
+        </section>
+        <section id="our-duty">
+          <h1>Our Duty</h1>
+          <duty-cards></duty-cards>
+        </section>
+        <section id="join-us">
+          <h1>Join us</h1>
+          <join-steps></join-steps>
+        </section>
+      </core-animated-pages>
+    </div>
+  </template>
+  <script>
+    Polymer({
+      tabSelection: 1
+    });
+  </script>
+</polymer-element>
