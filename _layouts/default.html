@@ -3,16 +3,13 @@
 
   {% include head.html %}
 
-  <body unresolved>
+  <body fullbleed vertical layout unresolved>
 
     <script src="/bower_components/platform/platform.js"></script>
     <link rel="import" href="/bower_components/font-roboto/roboto.html">
+    <link rel="import" href="/bower_components/polymer/polymer.html">
 
-    <div class="page-content">
-      <div class="container">
-        {{ content }}
-      </div>
-    </div>
+    {{ content }}
 
     {% include footer.html %}
 
