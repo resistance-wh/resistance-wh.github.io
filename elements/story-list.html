@@ -1,0 +1,76 @@
+---
+layout: null
+---
+<polymer-element name="story-list">
+  <template>
+    <style>
+      :host {
+        display: block;
+        padding-top: 16px;
+      }
+      img {
+        max-width: 100%;
+      }
+      .item {
+        width: 33%;
+        box-sizing: border-box;
+        padding: 0 16px 16px 16px;
+      }
+      .card {
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.1);
+        background-image: url('/images/1civil-repeat.png');
+      }
+      .content {
+        padding: 12px;
+      }
+      .meta {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.75);
+      }
+      .link {
+        color: #fff;
+        font-weight: 300;
+        text-decoration: none;
+      }
+      @media (min-width: 1200px) {
+        .item {
+          width: 25%;
+        }
+      }
+      @media (min-width: 600px) and (max-width: 899px) {
+        .item {
+          width: 50%;
+        }
+      }
+      @media (max-width: 599px) {
+        .item {
+          width: 100%;
+        }
+      }
+    </style>
+    <div class="list" horizontal layout>
+      {% for post in site.posts %}
+        <div class="item">
+          <div class="card">
+            {% if post.cover %}
+              <img src="{{ "/images/cover/" | prepend: site.baseurl }}{{ post.cover }}" alt="Post cover photo">
+            {% else %}
+              <img src="{{ "/images/cover/default-" | prepend: site.baseurl }}{{ post.url | size | times: 7 | modulo: 10 }}.jpg" alt="Post cover photo">
+            {% endif %}
+            <div class="content">
+              <span class="meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+              <h2>
+                <a class="link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              </h2>
+            </div>
+            <paper-shadow z="1"></paper-shadow>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </template>
+  <script>
+    Polymer({});
+  </script>
+</polymer-element>
