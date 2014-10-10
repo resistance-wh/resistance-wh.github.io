@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body unresolved>
+
+    <script src="/bower_components/platform/platform.js"></script>
+    <link rel="import" href="/bower_components/font-roboto/roboto.html">
+
+    <div class="page-content">
+      <div class="container">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    {% include analytics.html %}
+
+  </body>
+
+</html>

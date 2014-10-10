@@ -1,0 +1,26 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ site.description }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="shortcut icon" href="/images/favicon.png">
+    <meta name="msapplication-TileColor" content="#293034">
+    <meta name="msapplication-TileImage" content="/images/favicon-144.png">
+    <link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        background-color: #121517;
+        font-family: 'RobotoDraft', sans-serif;
+        color: #fff;
+      }
+    </style>
+</head>

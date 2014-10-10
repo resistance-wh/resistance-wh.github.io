@@ -1,0 +1,14 @@
+User-agent: __ADA__
+Disallow:
+
+User-agent: GLaDOS
+Disallow: /weighted_companion_cube/
+Disallow: /cake/
+
+User-agent: *
+Disallow: /nuclear_reactor/
+Disallow: /predator_drone/
+Disallow: /incinerator/
+Disallow: /portal_gun/
+Disallow: /death_ray/
+Disallow: /Lola/
