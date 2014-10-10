@@ -1,0 +1,58 @@
+<polymer-element name="join-steps">
+  <template>
+    <style>
+      :host {
+        display: block;
+        padding: 16px;
+      }
+      .container {
+        width: 600px;
+        max-width: 100%;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+      .steps {
+        padding: 16px;
+      }
+      h1 {
+        font-weight: 300;
+      }
+      hr {
+        border-color: rgba(255, 255, 255, .25);
+      }
+      paper-button {
+        padding: 8px 24px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        background-color: rgba(0, 0, 0, 0.25);
+      }
+      paper-button > a {
+        color: #fff;
+        text-decoration: none;
+      }
+    </style>
+    <div class="container">
+      <div class="steps">
+        <h1>Step 1: Get scanner app</h1>
+        <paper-button raised><a href="https://play.google.com/store/apps/details?id=com.nianticproject.ingress" target="_blank">Android</a></paper-button>
+        <paper-button raised><a href="https://itunes.apple.com/us/app/ingress/id576505181?ls=1&mt=8" target="_blank">iOS</a></paper-button>
+        <hr>
+        <h1>Step 2: Join the Reistance faction</h1>
+        <p>Open the Ingress app on your scanner. When asked to choose a faction, select <b>Resistance</b>(the blue one).</p>
+        <hr>
+        <h1>Step 3: Go outside</h1>
+        <p>Your scanner app is ready. It's time to move.</p>
+        <hr>
+        <h1>Step 4: Play tutorial</h1>
+        <p>Open your scanner app, tap the <b>OPS</b> button on the top-right, select <b>TRAINING</b> tab. You can use the training sessions to familarize with the world of Ingress.</p>
+        <hr>
+        <h1>Step 5: Join our community (Optional)</h1>
+        <paper-button raised><a href="https://plus.google.com/communities/107655539510557810006" target="_blank">Google+</a></paper-button>
+        <paper-button raised><a href="http://jq.qq.com/?_wv=1027&k=MKllwn" target="_blank">QQ</a></paper-button>
+        <paper-shadow z="1"></paper-shadow>
+      </div>
+    </div>
+  </template>
+  <script>
+    Polymer({});
+  </script>
+</polymer-element>
