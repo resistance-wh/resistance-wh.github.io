@@ -1,7 +1,7 @@
 # Site settings
 title: "Resistance Wuhan"
 description: "Resistance Wuhan Official Website"
-baseurl: "/" # the subpath of your site
+baseurl: "" # the subpath of your site
 url: "http://resistance-wh.github.io" # the base hostname & protocol for your site
 
 # Build settings
