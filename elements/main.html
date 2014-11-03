@@ -48,6 +48,13 @@
         background-color: #308fbf;
         border-radius: 0;
       }
+      #gplus {
+        padding: 8px 24px;
+        margin-bottom: 16px;
+        color: #fff;
+        background-color: #308fbf;
+        border-radius: 0;
+      }
       .tabs {
         width: 100%;
         color: #fff;
@@ -58,6 +65,10 @@
       .tabs::shadow #selectionBar {
         background-color: #fff;
       }
+      paper-button > a {
+        color: #fff;
+        text-decoration: none;
+      }
     </style>
     <div class="cover" vertical layout center center-justified>
       <div class="logo" center>
@@ -67,6 +78,7 @@
         <h1>Resistance Wuhan</h1>
         <p>Humanity's freedom is at stake. Join in our crusade to defend human civilization.</p>
         <paper-button id="join" raised>Join the Resistance</paper-button>
+        <paper-button id="gplus" raised><a href="https://plus.google.com/111493962694458958804" rel="publisher">Google+</a></paper-button>
       </div>
       <paper-tabs class="tabs" selected="{{tabSelection}}">
         <paper-tab class="tab">OUR STORY</paper-tab>
